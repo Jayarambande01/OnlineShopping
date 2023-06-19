@@ -31,7 +31,7 @@ namespace OnlineShopping.WebApi.Controllers
             try
             {
 
-                IEnumerable<Product> productList = await _dbProduct.GetAllAsync();
+                IEnumerable<Product> productList = await _dbProduct.GetAllAsync(includeProperties:"Category");
                 _response.Result = _mapper.Map<List<ProductDto>>(productList);
                 _response.StatusCode = HttpStatusCode.OK;
                 return Ok(_response);

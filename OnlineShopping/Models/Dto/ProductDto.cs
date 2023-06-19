@@ -27,4 +27,5 @@ public class ProductDto
     [StringLength(100)]
     [Unicode(false)]
     public string ImageUrl { get; set; }
+    public CategoryDto Category { get; set; } 
 }
